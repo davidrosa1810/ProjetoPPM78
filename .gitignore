@@ -1,0 +1,10 @@
+/Base_Project2Share/Base_Project2Share.iml
+/Base_Project2Share (1).iml
+/Base_Project2Share/.idea/codeStyles/Project.xml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/codeStyles/Project.xml
+*.xml
+*.class
+# Project exclude paths
+/out/

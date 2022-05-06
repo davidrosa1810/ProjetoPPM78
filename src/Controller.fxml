@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <GridPane fx:id="gridpane1" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="412.0" prefWidth="323.0" style="-fx-background-color: rgba(150, 150, 150, 0.05);">
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="78.6" minHeight="30.400018310546876" prefHeight="34.400018310546876" />
+            <RowConstraints maxHeight="84.0" minHeight="0.0" prefHeight="73.20000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="58.200006103515605" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="57.800006103515614" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="55.40002441406253" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="105.39997558593748" minHeight="1.5999816894531236" prefHeight="60.19997558593752" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="86.60001220703126" minHeight="10.0" prefHeight="85.79997558593749" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#onButton1Clicked" stylesheets="@style2.css" text="Say Hi" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <tooltip>
+                  <Tooltip fx:id="tooltip1" height="50.0" text="Olá. Eu adoro esta cadeira e a matéria nela lecionada. :) Scala let's go" width="50.0" />
+               </tooltip>
+            </Button>
+            <Text fx:id="text1" fill="#ff9a00" strokeType="OUTSIDE" strokeWidth="0.0" text="Scale" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="buttonscale1" mnemonicParsing="false" onMouseClicked="#onButtonScale1Clicked" scaleX="0.7" scaleY="0.55" style="-fx-background-radius: 100; -fx-background-color: #FF9A00; -fx-text-fill: #fff;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="buttonscale2" mnemonicParsing="false" onMouseClicked="#onButtonScale2Clicked" style="-fx-background-color: #20B2AA; -fx-background-radius: 100; -fx-text-fill: #fff;" text="+" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Text fx:id="text2" strokeType="OUTSIDE" strokeWidth="0.0" text="Zoom Camera" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Slider GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <MenuBar prefHeight="26.0" prefWidth="454.0" stylesheets="@stylemenu.css" GridPane.columnIndex="2" GridPane.columnSpan="2">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="menuitem1" mnemonicParsing="false" text="Load" />
+                        <MenuItem mnemonicParsing="false" text="Save?" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem fx:id="menuitemlight" mnemonicParsing="false" text="LightMode" />
+                        <MenuItem mnemonicParsing="false" text="DarkMode" />
+                        <Menu mnemonicParsing="false" text="Font">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#changeFontHeretica" text="Heretica" />
+                           </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Text fx:id="text3" strokeType="OUTSIDE" strokeWidth="0.0" text="Move Camera:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@infoicon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Cada butão vai movimentar o poligono representativo da camera numa direção ao longo do eixo dos x ou z" />
+               </tooltip>
+            </Label>
+            <Button mnemonicParsing="false" scaleX="0.6" scaleY="0.6" text="Up" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" scaleX="0.6" scaleY="0.6" text="Down" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" scaleX="0.6" scaleY="0.6" text="Left" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" scaleX="0.6" scaleY="0.6" text="Right" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sepia" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <ToggleButton fx:id="toggleButton1" mnemonicParsing="false" onAction="#clickToggle" text="ToggleButton" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GreenRemove" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="button2" mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <BorderPane fx:id="borderPane1" layoutX="10.0" layoutY="10.0" prefHeight="412.0" prefWidth="323.0" style="-fx-background-color: beige;">
+         <center>
+            <Button fx:id="buttonInitial" mnemonicParsing="false" onAction="#startVisualize" text="Button" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</Pane>

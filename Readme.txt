@@ -1,0 +1,2 @@
+No estado atual do projeto, estão realizadas as tarefas T1 a T4, juntamente com a possibilidade de escolha de diferentes dimensões da octree.
+Falta terminar o registo do estado final de execução num ficheiro de texto, e os pontos T5 a T7.
